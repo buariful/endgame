@@ -1,23 +1,28 @@
 import logo from './logo.svg';
 import './App.css';
+import {
+  Routes,
+  Route,
+} from "react-router-dom";
+import Home from './Pages/Home/Home';
+import Todo from './Pages/Todo/Todo';
+import Complete from './Pages/Complete/Complete';
+import Notfound from './Shared/Notfound';
+import Shared from './Shared/Shared';
+import Footer from './Shared/Footer';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Shared></Shared>
+      <Routes>
+        <Route path='/' element={<Home></Home>}></Route>
+        <Route path='/home' element={<Home></Home>}></Route>
+        <Route path='/todo' element={<Todo></Todo>}></Route>
+        <Route path='/complete-task' element={<Complete></Complete>}></Route>
+        <Route path='*' element={<Notfound></Notfound>}></Route>
+      </Routes>
+      <Footer></Footer>
     </div>
   );
 }
