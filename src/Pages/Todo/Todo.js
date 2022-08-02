@@ -1,9 +1,10 @@
 import React from 'react';
+import AllTodo from '../../Shared/AllTodo';
 
 const Todo = () => {
     return (
         <div>
-            this is todo
+            <AllTodo></AllTodo>
         </div>
     );
 };
