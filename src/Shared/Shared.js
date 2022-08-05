@@ -21,9 +21,10 @@ const Shared = () => {
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal p-0 fond-semibold text-xl text-white">
-                        <Link to='/'>home</Link>
-                        <Link to='/todo' className="mx-3">Todo</Link>
-                        <Link to='/complete-task'>Completed task</Link>
+                        <Link to='/' className="mr-6">home</Link>
+                        <Link to='/todo' className="mr-6">Todo</Link>
+                        <Link to='/complete-task' className="mr-6">Completed task</Link>
+                        <Link to='/calendar' className="mr-6">Calendar</Link>
                     </ul>
                 </div>
                 <div className="navbar-end">

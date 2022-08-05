@@ -9,7 +9,6 @@ const AllTodo = () => {
             .then(res => res.json())
             .then(data => setTodos(data))
     }, [])
-    console.log(todos)
     return (
         <div className='w-11/12 mx-auto'>
 
