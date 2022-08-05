@@ -5,7 +5,7 @@ const AllTodo = () => {
     const [todos, setTodos] = useState('');
 
     useEffect(() => {
-        fetch('todo.json')
+        fetch('https://stormy-lake-82482.herokuapp.com/todos')
             .then(res => res.json())
             .then(data => setTodos(data))
     }, [])
@@ -14,7 +14,7 @@ const AllTodo = () => {
 
 
 
-            <div className="text-5xl mt-12 mb-8 font-semibold">Your Uncomplete Tasks</div>
+            <div className="text-5xl mt-12 mb-8 font-semibold">Your Uncompleted Tasks</div>
             {todos ? todos.map(todo => <SingleTodo abc={todo} key={todo._id}></SingleTodo>) : <p className="text-5xl mt-12 mb-8 font-semibold">There are no tasks</p>}
         </div>
     );

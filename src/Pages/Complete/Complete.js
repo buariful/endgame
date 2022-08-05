@@ -5,7 +5,7 @@ const Complete = () => {
     const [todos, setTodos] = useState('');
 
     useEffect(() => {
-        fetch('complete.json')
+        fetch('https://stormy-lake-82482.herokuapp.com/completed')
             .then(res => res.json())
             .then(data => setTodos(data))
     }, [])
