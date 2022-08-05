@@ -9,7 +9,10 @@ const SingleTodo = ({ abc }) => {
                 <input type="checkbox" className="checkbox" />
             </div>
             <div className='flex flex-col md:flex-row gap-5 items-center align-middle'>
-                <h3 className='font-semibold'>{abc.title}</h3>
+                <div>
+                    <p className='text-left'>{abc.date}</p>
+                    <h3 className='font-semibold'>{abc.title}</h3>
+                </div>
                 <p className='text-left'>{abc.description}</p>
             </div>
         </div>

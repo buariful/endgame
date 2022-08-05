@@ -36,7 +36,7 @@ const Todo = () => {
                         <textarea type="text" id='description' placeholder="Type here" className="textarea textarea-bordered w-10/12 mx-auto" />
                     </div>
 
-                    <button className="mt-5 btn btn-primary">Save</button>
+                    <button type='submit' className="mt-5 btn btn-primary">Save</button>
                 </form>
             </div>
             <AllTodo></AllTodo>
