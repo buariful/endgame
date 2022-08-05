@@ -1,12 +1,12 @@
 import React from 'react';
 
 const SingleTodo = ({ abc }) => {
-
     const deleteTask = () => {
         fetch(`https://stormy-lake-82482.herokuapp.com/deletetask/:${abc._id}`, {
             method: 'DELETE',
         })
             .then(res => res.json())
+            .then(data => console.log(data))
     }
 
     const handleDelete = () => {
